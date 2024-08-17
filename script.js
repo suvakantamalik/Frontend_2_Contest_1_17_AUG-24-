@@ -26,7 +26,7 @@ let arr = [
      const developerListDiv = document.getElementById("developer-list");
 
      developerListDiv.innerHTML = "";
-    developerListDiv.innerHTML += `Developer List by Map <br>`;
+     developerListDiv.innerHTML += `Developer List by Map <br>`;
 
      developerListDiv.innerHTML += developers.join("<br>");
   }
@@ -56,6 +56,7 @@ let arr = [
     console.log(arr);
     */
 
+    document.getElementById("addData-modal").style.display = "block";
     const form = document.getElementById("addData-form");
     form.addEventListener("submit", handleSubmit);
   }
@@ -74,15 +75,11 @@ let arr = [
         const newData = {id:parseInt(id), name, age:parseInt(age), profession};
         arr.push(newData);
         console.log(arr);
-        form.reset();
   } 
   document.addEventListener("DOMContentLoaded", function() {
     addData();
 });
 
-function addData() {
-    document.getElementById("addData-modal").style.display = "block";
-}
 
 function closeAddDataForm() {
     document.getElementById("addData-modal").style.display = "none";
