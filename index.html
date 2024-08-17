@@ -1,0 +1,62 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- buttons use for all the clicking functionality -->
+
+    <div class="container">
+        <button onclick="PrintDeveloperbyMap()" id="printDeveloperbyMap-data">
+            Console log Students with Map        
+        </button>
+
+        <button onclick="PrintDeveloperbyForEach()">
+            Console log Students with foreach
+        </button>
+        
+        <button onclick="addData()">Console New Data with next Employee</button>
+        <button onclick="removeAdmin()">Remove Admin</button>
+        <button onclick="concatenateArray()">concatenateArray</button>
+    </div>
+
+
+    <!-- Modal for Add Data Form -->
+    <div id="addData-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddDataForm()">&times;</span>
+            <form id="addData-form">
+                <label for="addData-id" style="color: black;"><b>ID:</b></label>
+                <input type="text" id="addData-id"  style="color: black;" disabled>
+                <label for="addData-name" style="color: black;"><b>Name:</b></label>
+                <input type="text" id="addData-name" style="color: black;" required>
+                <label for="addData-age" style="color: black;"><b>Age:</b></label>
+                <input type="number" id="addData-age" style="color: black;" required>
+                <label for="addData-profession" style="color: black;"><b>Profession:</b></label>
+                <input type="text" id="addData-profession" style="color: black;" required>
+                <button type="submit" style="margin-top: 1rem; border-radius: 10px;"><b>Submit</b></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- List of Developers -->
+     <div id="admin-list"></div><br>
+
+    <div id="developer-list"></div>
+    
+    <div id="developer-list-for-each"></div>   
+
+    <div id="concat-list"></div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
